@@ -63,9 +63,9 @@ transparent;
     appearance: none;
 }
 .input-radio:checked ~ .container-img {
-    width: 200px;
+    width: 300px;
     margin: auto;
-    height: 200px;
+    height: 300px;
     margin-bottom: 10px;
     transition: all .6s;
 }
@@ -91,5 +91,12 @@ border-color: transparent
 @media(max-width:360px){
     .radio-title{
         font-size: 20px;
+    }
+    .input-radio:checked ~ .container-img {
+        width: 200px;
+        margin: auto;
+        height: 200px;
+        margin-bottom: 10px;
+        transition: all .6s;
     }
 }
