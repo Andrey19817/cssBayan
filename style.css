@@ -1,0 +1,102 @@
+.wrapper {
+    max-width: 700px;
+    min-height: 70vh;
+    margin: auto;
+    background-color: #F5F5EB;
+    padding: 10px;
+}
+h1{
+    margin-left: 20px;
+}
+.radio-title:after{
+    display: none;
+}
+.wrapper:hover .radio-title:after{
+   display: block; 
+}
+.wrapper:hover .radio-title{
+    color: #0059D9;
+}
+.item {
+    display: flex;
+    flex-direction: column;
+    border-bottom: solid 2px grey;
+    width: 95%;
+    margin: 0px auto 10px auto;
+}
+.item:hover .container-img{
+    width: 200px;
+    margin: auto;
+    height: 200px;
+    margin-bottom: 10px;
+    transition: all .6s;
+}
+.item:hover .radio-title:after{
+    border-style: solid;
+    border-width: 0 5px 8px 5px;
+    border-color: transparent 
+     transparent #007bff transparent;
+}
+.radio-title{
+    height: 30px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-size: 30px;
+    font-weight:bold;
+    padding-bottom: 5px;
+}
+.radio-title:after{
+    content: '';
+    position: absolute;
+border-style: solid;
+border-width: 8px 5px 0 5px;
+border-color: #007bff
+transparent transparent 
+transparent;
+    margin-left: 95%;
+}
+.radio-title:hover{
+    cursor: pointer;
+}
+.input-radio {
+    appearance: none;
+}
+.input-radio:checked ~ .container-img {
+    width: 300px;
+    margin: auto;
+    height: 300px;
+    margin-bottom: 10px;
+    transition: all .6s;
+}
+.input-radio:checked + .radio-title:after {
+border-style: solid;
+border-width: 0 5px 8px 5px;
+border-color: transparent 
+ transparent black transparent;
+}
+.input-radio:checked + .radio-title{
+    color: black;
+}
+.container-img {
+    margin: auto;
+  height: 0px;
+  transition: all .6s;
+}
+@media(max-width:820px){
+    .radio-title{
+        font-size: 25px;
+    }
+}
+@media(max-width:360px){
+    .radio-title{
+        font-size: 20px;
+    }
+    .input-radio:checked ~ .container-img {
+        width: 200px;
+        margin: auto;
+        height: 200px;
+        margin-bottom: 10px;
+        transition: all .6s;
+    }
+}
